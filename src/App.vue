@@ -1,28 +1,36 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-main>
+      <v-layout>
+        <v-container class="gray lighthen-5">
+          <v-row>
+            <v-col cols="12 text-center">
+                <h2 class="subheading blue--text">Sisinfo PT. Maju Sejahtera</h2>
+            </v-col>
+          </v-row>
+          <v-row justify="center">
+            <v-col col="8">
+              <TablePegawai />
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-layout>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  import TablePegawai from './components/TablePegawai.vue'
+  export default {
+    components: {
+      TablePegawai,
+    },
   }
-}
 </script>
 
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    * {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 </style>
